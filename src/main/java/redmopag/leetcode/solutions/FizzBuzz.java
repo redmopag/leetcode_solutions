@@ -14,7 +14,11 @@ import java.util.List;
 
 public class FizzBuzz {
     public List<String> fizzBuzz(int n){
+        // Создание нового списка - создаётся автоматически
+        // Нужно только переопределить метод, ответственный за создание объектов в списке
+        // И метод, ответственный на настройку размера списка
         return new AbstractList<>() {
+            // Метод, создающий объекты
             @Override
             public String get(int n) {
                 n++;
@@ -30,6 +34,7 @@ public class FizzBuzz {
                 return String.valueOf(n);
             }
 
+            // Метод, настраивающий размер списка
             @Override
             public int size() {
                 return n;
